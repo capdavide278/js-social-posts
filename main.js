@@ -102,12 +102,15 @@ function stampaPost(){
 
 stampaPost();
 
-const divButtonLike = document.querySelectorAll(".like-button");
-console.log(divButtonLike);
+const like = document.querySelectorAll(".like-button");
+console.log(like);
 
-divButtonLike.forEach((button) => {
+like.forEach((button) => {
     button.addEventListener("click",
     function() {
+        
         button.classList.add('like-button--liked');
+        const likeCounter = document.getElementById(`like-counter-${posts.likes}`);
+        likeCounter.innerText = posts.likes++;
     })
 });
