@@ -108,9 +108,7 @@ console.log(like);
 like.forEach((button) => {
     button.addEventListener("click",
     function() {
-        
+
         button.classList.add('like-button--liked');
-        const likeCounter = document.getElementById(`like-counter-${posts.likes}`);
-        likeCounter.innerText = posts.likes++;
     })
 });
